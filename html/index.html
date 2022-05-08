@@ -5,15 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="../js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="mg-gallery-overlay-wrapper">
+        <div class="mg-gallery-overlay-content">
+            <div class="mg-gallery-overlay-content-image">
+                <img src="https://i05.fotocdn.net/s123/579451ed8285d328/gallery_xl/2814962040.jpg" alt="">
+            </div>
+            <div class="mg-gallery-overlay-content-navigation-wrapper">
+                <img class="mg-gallery-overlay-content-navigation" src="../images/arrow.svg" alt="">
+                <img class="mg-gallery-overlay-content-navigation" src="../images/arrow.svg" alt="">
+            </div>
+            <div class="mg-gallery-overlay-content-download-wrapper">
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-full" target="_blank" href="">Full</a></div>
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-raw" target="_blank" href="">Raw</a></div>
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-regular" target="_blank" href="">Regular</a></div>
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-small" target="_blank" href="">Small</a></div>
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-small-s3" target="_blank" href="">Small S3</a></div>
+                <div class="mg-gallery-overlay-content-download"><a class="js-link-thumb" target="_blank" href="">Thumb</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="mg-searchbar-wrapper">
+        <form class="mg-searchbar">
+            <input class="mg-searchbar-input" type="text" placeholder="I'm looking for...">
+            <button class="mg-searchbar-button" type="submit">observe</button>
+        </form>
+    </div>
     <div class="mg-gallery-wrapper">
         <div class="mg-gallery">
         </div>
     </div>
+
+    <script src="../js/script.js"></script>
     <script>
         init();
     </script>
