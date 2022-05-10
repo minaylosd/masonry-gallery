@@ -40,27 +40,28 @@ body {
 .mg-gallery-overlay-content-image {
     width: inherit;
     height: max-content;
-    margin-bottom: 20px;
-    border-radius: 15px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
 .mg-gallery-overlay-content-image>img {
     width: 100%;
+    border-radius: 15px;
 }
 
-.mg-gallery-overlay-content-navigation-wrapper{
+.mg-gallery-overlay-wrapper-navigation{
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    position: absolute;
+    width: 55%;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .mg-gallery-overlay-content-navigation {
-    width: 50px;
+    width: 80px;
+    padding: 1px;
     cursor: pointer;
 }
 
@@ -83,6 +84,7 @@ body {
     width: inherit;
     background-color: #f6f6f6;
     border-radius: 15px;
+    margin: 20px auto 0 auto;
 }
 
 .mg-gallery-overlay-content-download {
@@ -113,6 +115,13 @@ a {
     color: rgb(0, 0, 0);
 }
 
+.mg-searchbar-wrapper {
+    transition: all 0.8s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 0.8s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
 .mg-searchbar {
     display: flex;
     margin: 0 auto;
@@ -126,9 +135,10 @@ input {
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid black;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
     font-family: inherit;
+    padding-left: 5px;
 }
     
 .mg-searchbar-input {
@@ -156,17 +166,45 @@ button {
 }
 
 .mg-gallery {
-    width: 790px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px 2px;
+    width: 1030px;
+    max-height: 1000px;
     margin: auto;
 }
 
-.mg-gallery-item {
-    width: 190px;
-    background-color: black;
-    margin-bottom: 10px;
+.item-break {
+    display: block;
+    /* border: 1px solid #ddd; */
+    margin: 0;
+    content: "";
+    padding: 0;
+    min-height: 900px;
+    box-sizing: border-box;
+    width: 2px;
 }
+
+
+.mg-gallery-item {
+    max-width: 24%;
+    background: black;
+}
+
+.mg-gallery-item:nth-of-type(4n+1) { order: 1; }
+.mg-gallery-item:nth-of-type(4n+2) { order: 2; }
+.mg-gallery-item:nth-of-type(4n+3) { order: 3; }
+.mg-gallery-item:nth-of-type(4n) { order: 4; }
+
+.item-break:nth-of-type(3n+1) {order:1;}
+.item-break:nth-of-type(3n+2) {order:2;}
+.item-break:nth-of-type(3n) {order:3;}
+
 
 .mg-gallery-item>img {
     display: block;
     width: 100%;
 }
+
+
+
