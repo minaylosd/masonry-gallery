@@ -121,7 +121,8 @@ a {
     color: rgb(0, 0, 0); 
 } 
  
-.mg-searchbar-wrapper { 
+.mg-searchbar-wrapper {
+    margin: 30vh 0 0 0;
     transition: all 0.8s; 
     transition-timing-function: ease-in-out; 
     -webkit-transition: 0.8s; 
@@ -180,21 +181,20 @@ button {
     text-align: center;
 }
 
-.mg-gallery { 
+.mg-gallery {
+    overflow: hidden;
     position: relative; 
     margin: 0 auto; 
     width: 830px; 
-    height: fit-content; 
 } 
  
 .mg-gallery-item { 
     position: absolute; 
     width: 200px; 
-    background: black; 
+    height: max-content;
 } 
  
 .mg-gallery-item>img { 
-    display: block; 
     width: 100%; 
 } 
  
